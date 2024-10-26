@@ -56,3 +56,5 @@ we have 2 different tasks, (one is completed) and the other one is not completed
 prevent the refresh on form submit using event.preventDefault()
 inputEl.value to get the value
 condition for empty value
+
+#https://github.com/gliese-backup/Taskey/blob/main/README.md
