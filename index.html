@@ -1,68 +1,75 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="forest">
+<html lang="en" data-theme="lemonade">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tasknize &mdash; Organize Yourself</title>
-    <!-- Tabler icon -->
+    <title>Taskey &mdash; Organize Yourself</title>
+
+    <!-- Tabler Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
     />
   </head>
   <body>
-    <!-- Mark: NavBar -->
-    <header>
-      <div class="navbar bg-base-100">
-        <div class="flex-1">
-          <a class="btn btn-ghost text-xl">Tasknize</a>
-        </div>
-        <div class="flex-none">
-          <button class="btn btn-square btn-ghost">
-            <i class="ti ti-brand-github text-xl"></i>
-          </button>
-        </div>
+    <!-- 
+      MARK: Navbar
+    -->
+    <div class="navbar bg-base-100">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl">Taskey</a>
       </div>
-    </header>
+      <div class="flex-none">
+        <a
+          class="btn btn-square btn-ghost"
+          href="https://github.com/gliese-backup/taskey"
+          target="_blank"
+        >
+          <i class="ti ti-brand-github text-xl"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- 
+      MARK: Content
+    -->
     <main class="flex justify-center items-center min-h-screen">
-      <div class="card bg-base-100 w-60 sm:w-72 md:w-80 shadow-xl mb-10">
+      <div class="card w-60 sm:w-72 md:w-80 shadow-2xl mb-10">
         <figure>
-          <img src="pattern.png" alt="img" />
+          <img src="pattern.png" alt="Pattern" />
         </figure>
         <div class="card-body">
-          <!-- Task inputes -->
+          <!-- Task Input -->
           <form>
             <input
               type="text"
               placeholder="Add your task"
               class="input input-bordered w-full max-w-xs"
+              data-user-input
             />
           </form>
-          <!-- Task list -->
-          <section class="tasks-list rounded">
-            <div class="form-control">
-              <label class="label cursor-pointer">
-                <span class="label-text">Remember me</span>
-                <input
-                  type="checkbox"
-                  class="checkbox checkbox-primary"
-                />
-              </label>
-              <label class="label cursor-pointer #6d28d9">
-                <span class="label-text">Remember me</span>
-                <input
-                  type="checkbox"
-                  checked="checked"
-                  class="checkbox checkbox-primary"
-                />
-              </label>
-            </div>
-          </section>
+
+          <!-- Task List -->
+          <div class="form-control">
+            <label class="label cursor-pointer">
+              <span class="label-text">Remember me</span>
+              <input type="checkbox" class="checkbox checkbox-primary" />
+            </label>
+            <label class="label cursor-pointer bg-lime-100 rounded">
+              <span class="label-text">Remember me</span>
+              <input
+                type="checkbox"
+                checked="checked"
+                class="checkbox checkbox-primary"
+              />
+            </label>
+          </div>
         </div>
       </div>
     </main>
 
-    <!-- Script -->
+    <!-- Scripts -->
     <script src="src/main.js" type="module"></script>
   </body>
 </html>
